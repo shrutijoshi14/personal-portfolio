@@ -859,6 +859,22 @@ a {
   color: #fff;
 }
 
+.detail-icon i.fa-envelope {
+  color: #74cac0;
+}
+.detail-icon i.fa-phone {
+  color: #1081b9;
+}
+.detail-icon i.fa-map-marker-alt {
+  color: #449cef;
+}
+.detail-icon i.fa-github {
+  color: #181717;
+}
+.detail-icon i.fa-linkedin-in {
+  color: #0a66c2;
+}
+
 .detail-card h3 {
   color: #fff;
   font-size: 18px;
