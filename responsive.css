@@ -1384,3 +1384,103 @@ img {
     justify-content: center;
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
+/* ===================================================
+   🖥 ULTRA-WIDE / 4K SCREENS
+=================================================== */
+@media (min-width: 1600px) {
+  .footer-container {
+    max-width: 1600px;
+  }
+
+  .footer-brand h3 {
+    font-size: 24px;
+  }
+
+  .footer-social a {
+    font-size: 22px;
+  }
+}
+
+/* ===================================================
+   💻 LARGE DESKTOPS / LAPTOPS
+=================================================== */
+@media (max-width: 1200px) {
+  .footer-container {
+    gap: 36px;
+  }
+}
+
+/* ===================================================
+   📱 TABLET LANDSCAPE
+=================================================== */
+@media (max-width: 992px) {
+  .footer-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* ===================================================
+   📱 TABLET PORTRAIT
+=================================================== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* ===================================================
+   📱 LARGE MOBILE
+=================================================== */
+@media (max-width: 600px) {
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .footer-social a {
+    font-size: 18px;
+  }
+}
+
+/* ===================================================
+   📱 SMALL MOBILE
+=================================================== */
+@media (max-width: 420px) {
+  .footer-container {
+    padding: 36px 16px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand h3 {
+    font-size: 20px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

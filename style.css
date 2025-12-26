@@ -987,10 +987,92 @@ a {
 /* -------------------------------------------------------------------------- */
 /*                                   FOOTER                                   */
 /* -------------------------------------------------------------------------- */
+
 footer {
-  background: #35424a;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+  background: #0f172a;
+  color: #cbd5f5;
+  width: 100%;
   font-size: 14px;
+}
+
+/* ================= MAIN FOOTER ================= */
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* ================= BRAND ================= */
+.footer-brand {
+  flex: 1 1 240px;
+  min-width: 220px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ================= LINKS ================= */
+.footer-links {
+  flex: 2 1 380px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 18px 28px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+/* ================= SOCIAL ================= */
+.footer-social {
+  flex: 1 1 200px;
+  min-width: 180px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-social a {
+  color: #cbd5f5;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* ================= BOTTOM ================= */
+.footer-bottom {
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0.75;
 }
