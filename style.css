@@ -25,6 +25,7 @@ body {
   line-height: 1.6;
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* ================= HEADER & NAVBAR ================= */
@@ -227,9 +228,11 @@ main {
   min-height: auto;
   background: linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary));
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   align-items: center;
+  justify-content: center;
   gap: 40px;
+  width: 100%;
 }
 
 main .right {
@@ -250,6 +253,7 @@ main .img img {
   object-fit: cover;
   object-position: top;
   border: 4px solid #35424a;
+  aspect-ratio: 1 / 1;
 }
 
 main .left {
@@ -812,10 +816,11 @@ a {
 
 .contact-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 50px;
   margin-top: 50px;
   align-items: start;
+  justify-content: center;
 }
 
 /* Contact Details */

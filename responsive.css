@@ -1,16 +1,248 @@
-/* -------------------------------------------------------------------------- */
-/*                            RESPONSIVE DESIGN                               */
-/* -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
+/* ==================== COMPLETE RESPONSIVE DESIGN ==================== */
+/* This file ensures EVERY element wraps and fits properly on ALL screen sizes */
+
+/* ==================== BASE RESPONSIVE SETTINGS ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==================== DESKTOP (1200px+) ==================== */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+
   main {
-    padding: 40px 20px;
+    padding: 50px 70px;
     margin-top: 70px;
-    gap: 30px;
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
   }
 
   main .right {
     order: -1;
+  }
+
+  main .left {
+    text-align: left;
+  }
+
+  main .img img {
+    width: 350px;
+    height: 350px;
+  }
+
+  main h1 {
+    font-size: 50px;
+  }
+
+  main h2 {
+    font-size: 24px;
+  }
+
+  main .buttons {
+    justify-content: flex-start;
+  }
+
+  main .social-icons {
+    justify-content: flex-start;
+  }
+
+  section {
+    padding: 80px 70px;
+  }
+
+  .section-title {
+    font-size: 48px;
+  }
+
+  .cards-container {
+    column-count: 2;
+    column-gap: 24px;
+  }
+
+  .skills-cards {
+    column-count: 2;
+    column-gap: 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  #contact {
+    padding: 80px 70px;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+  }
+}
+
+/* ==================== LAPTOP (992px - 1199px) ==================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  main {
+    padding: 45px 50px;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+  }
+
+  main .left {
+    text-align: left;
+  }
+
+  main .img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  main h1 {
+    font-size: 42px;
+  }
+
+  main h2 {
+    font-size: 22px;
+  }
+
+  main p {
+    font-size: 15px;
+  }
+
+  main .buttons {
+    justify-content: flex-start;
+  }
+
+  main .social-icons {
+    justify-content: flex-start;
+  }
+
+  section {
+    padding: 70px 50px;
+  }
+
+  .section-title {
+    font-size: 42px;
+  }
+
+  .cards-container {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .skills-cards {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  #contact {
+    padding: 70px 50px;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+  }
+}
+
+/* ==================== TABLET LANDSCAPE (768px - 991px) ==================== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 40px 30px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+    width: 100%;
+  }
+
+  main .left {
+    width: 100%;
+  }
+
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .img img {
+    width: 260px;
+    height: 260px;
   }
 
   main h1 {
@@ -25,99 +257,119 @@
     font-size: 15px;
   }
 
-  main .img img {
-    width: 280px;
-    height: 280px;
-  }
-
   main .buttons {
-    flex-direction: column;
-  }
-
-  main button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
   }
 
-  section {
-    padding: 60px 20px;
-  }
-
-  .section-title {
-    font-size: 32px;
-  }
-
-  .section-title::after {
-    width: 50px;
-  }
-
-  .cards-container {
-    /* grid-template-columns: 1fr; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: auto;
-  }
-
-  .skills-cards {
-    /* grid-template-columns: 1fr; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-banner {
-    height: 140px;
-    font-size: 36px;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .contact-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
-
-  .contact-form-wrapper {
-    padding: 30px;
+  main button {
+    min-width: 150px;
+    flex: 0 1 auto;
   }
 
   .social-icons {
     justify-content: center;
   }
 
-  #skills {
-    padding: 60px 20px;
+  section {
+    padding: 60px 30px;
   }
 
-  .skills-title {
-    font-size: 32px;
+  .section-title {
+    font-size: 36px;
   }
 
-  .projects-section {
-    padding: 60px 20px;
-  }
-
-  #contact {
-    padding: 60px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  main {
-    padding: 30px 15px;
-    margin-top: 65px;
+  .cards-container {
+    column-count: 1;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
 
+  .card {
+    margin-bottom: 0;
+    break-inside: auto;
+    width: 100%;
+  }
+
+  .skills-cards {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #contact {
+    padding: 60px 30px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+  }
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contact-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ==================== TABLET PORTRAIT (576px - 767px) ==================== */
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  main {
+    padding: 35px 25px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+    width: 100%;
+  }
+
+  main .left {
+    width: 100%;
+  }
+
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .img img {
+    width: 220px;
+    height: 220px;
+  }
+
   main h1 {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 1.3;
   }
 
   main h2 {
@@ -126,33 +378,50 @@
 
   main p {
     font-size: 14px;
-    margin: 15px 0;
+    line-height: 1.6;
   }
 
-  main .img img {
-    width: 220px;
-    height: 220px;
+  main .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
   }
 
   main button {
-    padding: 10px 20px;
-    font-size: 14px;
+    width: 100%;
+    padding: 11px 25px;
+    font-size: 15px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 16px;
   }
 
   section {
-    padding: 50px 15px;
+    padding: 50px 25px;
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .section-subtitle {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .cards-container {
+    column-count: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
   .card {
-    padding: 18px 20px;
+    margin-bottom: 0;
+    padding: 22px 20px;
+    width: 100%;
   }
 
   .card-header h3 {
@@ -164,17 +433,409 @@
     font-size: 14px;
   }
 
+  .skills-cards {
+    column-count: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
   .skill-card {
+    margin-bottom: 0;
+    padding: 22px;
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-banner {
+    height: 140px;
+    font-size: 36px;
+  }
+
+  #contact {
+    padding: 50px 25px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .detail-card {
+    padding: 22px 18px;
+    width: 100%;
+  }
+
+  .contact-form-wrapper {
+    padding: 28px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ==================== MOBILE LARGE (480px - 575px) ==================== */
+@media (min-width: 480px) and (max-width: 575px) {
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .logo {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  main {
+    padding: 30px 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+    width: 100%;
+  }
+
+  main .left {
+    width: 100%;
+  }
+
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  main h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  main h2 {
+    font-size: 17px;
+  }
+
+  main p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  main .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  main button {
+    width: 100%;
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+  }
+
+  section {
+    padding: 45px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle,
+  #about > p {
+    font-size: 14px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    margin-bottom: 0;
+    padding: 20px 18px;
+    width: 100%;
+  }
+
+  .card-header h3 {
+    font-size: 19px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 13.5px;
+  }
+
+  .skills-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skill-card {
+    margin-bottom: 0;
     padding: 20px;
-    cursor: pointer;
+    width: 100%;
+  }
+
+  .skill-card h3 {
+    font-size: 19px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .project-banner {
+    height: 130px;
+    font-size: 34px;
+  }
+
+  .project-content {
+    padding: 18px;
+  }
+
+  .project-content h3 {
+    font-size: 17px;
+  }
+
+  .project-content p {
+    font-size: 13px;
+  }
+
+  .tech-stack span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  #contact {
+    padding: 45px 20px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+  }
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .detail-card {
+    padding: 20px 16px;
+    width: 100%;
+  }
+
+  .detail-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .detail-card h3 {
+    font-size: 15px;
+  }
+
+  .detail-card p {
+    font-size: 13px;
+    word-wrap: break-word;
+  }
+
+  .contact-form-wrapper {
+    padding: 24px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px 13px;
+    font-size: 14px;
+  }
+}
+
+/* ==================== MOBILE MEDIUM (375px - 479px) ==================== */
+@media (min-width: 375px) and (max-width: 479px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .hamburger span {
+    width: 26px;
+    height: 2.5px;
+  }
+
+  main {
+    padding: 28px 18px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+    width: 100%;
+  }
+
+  main .left {
+    width: 100%;
+  }
+
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .img img {
+    width: 180px;
+    height: 180px;
+  }
+
+  main h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  main h2 {
+    font-size: 16px;
+  }
+
+  main p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  main .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  main button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icons i {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 42px 18px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .section-subtitle,
+  #about > p {
+    font-size: 13.5px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card {
+    margin-bottom: 0;
+    padding: 18px 16px;
+    width: 100%;
+  }
+
+  .card-header h3 {
+    font-size: 18px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .skills-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .skill-card {
+    margin-bottom: 0;
+    padding: 18px;
+    width: 100%;
   }
 
   .skill-card h3 {
     font-size: 18px;
   }
 
-  .project-card {
-    margin-bottom: 20px;
+  .skill span {
+    font-size: 12px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .project-banner {
@@ -183,15 +844,260 @@
   }
 
   .project-content {
-    padding: 18px;
+    padding: 16px;
   }
 
   .project-content h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .project-content p {
+    font-size: 12.5px;
+  }
+
+  .tech-stack span {
+    font-size: 10.5px;
+    padding: 5px 9px;
+  }
+
+  .project-links a {
+    font-size: 12px;
+    padding: 9px 0;
+  }
+
+  #contact {
+    padding: 42px 18px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .detail-card {
+    padding: 18px 15px;
+    width: 100%;
+  }
+
+  .detail-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .detail-card h3 {
+    font-size: 14.5px;
+  }
+
+  .detail-card p {
+    font-size: 12.5px;
+    word-wrap: break-word;
+  }
+
+  .contact-form-wrapper {
+    padding: 22px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group label {
     font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 9px 12px;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .submit-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+    width: 100%;
+  }
+}
+
+/* ==================== MOBILE SMALL (320px - 374px) ==================== */
+@media (min-width: 320px) and (max-width: 374px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2.5px;
+  }
+
+  main {
+    padding: 25px 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+    width: 100%;
+  }
+
+  main .left {
+    width: 100%;
+  }
+
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .img img {
+    width: 160px;
+    height: 160px;
+  }
+
+  main h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  main h2 {
+    font-size: 15px;
+  }
+
+  main p {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  main .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  main button {
+    width: 100%;
+    padding: 9px 18px;
+    font-size: 12.5px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-icons i {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 38px 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-subtitle,
+  #about > p {
+    font-size: 13px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card {
+    margin-bottom: 0;
+    padding: 16px 14px;
+    width: 100%;
+  }
+
+  .card-header h3 {
+    font-size: 17px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .skills-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .skill-card {
+    margin-bottom: 0;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .skill-card h3 {
+    font-size: 17px;
+  }
+
+  .skill span {
+    font-size: 11.5px;
+  }
+
+  .skill span i {
+    font-size: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .project-banner {
+    height: 110px;
+    font-size: 30px;
+  }
+
+  .project-content {
+    padding: 15px;
+  }
+
+  .project-content h3 {
+    font-size: 15px;
+  }
+
+  .project-content p {
+    font-size: 12px;
   }
 
   .tech-stack {
@@ -199,66 +1105,282 @@
   }
 
   .tech-stack span {
-    font-size: 11px;
+    font-size: 10px;
     padding: 4px 8px;
   }
 
   .project-links a {
-    font-size: 12px;
+    font-size: 11px;
     padding: 8px 0;
   }
 
-  #skills {
-    padding: 50px 15px;
-  }
-
-  .skills-title {
-    font-size: 24px;
-  }
-
-  .skills-subtitle {
-    font-size: 16px;
-  }
-
-  .projects-section {
-    padding: 50px 15px;
-  }
-
   #contact {
-    padding: 50px 15px;
+    padding: 38px 15px;
   }
 
   .contact-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
   }
 
   .contact-details {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
   }
 
   .detail-card {
-    padding: 25px 20px;
+    padding: 16px 14px;
+    width: 100%;
+  }
+
+  .detail-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .detail-card h3 {
+    font-size: 14px;
+  }
+
+  .detail-card p {
+    font-size: 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .contact-form-wrapper {
-    padding: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group label {
+    font-size: 12.5px;
   }
 
   .form-group input,
   .form-group textarea,
   .form-group select {
-    padding: 10px 12px;
-    font-size: 14px;
+    padding: 9px 11px;
+    font-size: 12.5px;
+    width: 100%;
+  }
+
+  .form-group textarea {
+    min-height: 90px;
   }
 
   .submit-btn {
-    padding: 12px 20px;
-    font-size: 14px;
+    padding: 9px 16px;
+    font-size: 12.5px;
+    width: 100%;
   }
 
   footer {
-    padding: 15px;
+    padding: 12px 10px;
+    font-size: 11px;
+  }
+}
+
+/* ==================== EXTRA SMALL (below 320px) ==================== */
+@media (max-width: 319px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  main {
+    padding: 22px 12px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .right {
+    order: -1;
+    width: 100%;
+  }
+
+  main .left {
+    width: 100%;
+  }
+
+  main .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .img img {
+    width: 140px;
+    height: 140px;
+  }
+
+  main h1 {
+    font-size: 22px;
+  }
+
+  main h2 {
+    font-size: 14px;
+  }
+
+  main p {
     font-size: 12px;
+  }
+
+  main .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  main button {
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  section {
+    padding: 35px 12px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .card,
+  .skill-card {
+    padding: 14px 12px;
+    width: 100%;
+  }
+
+  .card-header h3,
+  .skill-card h3 {
+    font-size: 16px;
+  }
+
+  .project-banner {
+    height: 100px;
+    font-size: 28px;
+  }
+
+  #contact {
+    padding: 35px 12px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .detail-card {
+    padding: 14px 12px;
+    width: 100%;
+  }
+
+  .detail-card p {
+    font-size: 11px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .contact-form-wrapper {
+    padding: 18px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+  }
+}
+
+/* ==================== UTILITY CLASSES FOR ALL SCREENS ==================== */
+@media (max-width: 991px) {
+  /* Force single column layout for cards on smaller screens */
+  .cards-container,
+  .skills-cards {
+    display: flex !important;
+    flex-direction: column;
+    column-count: 1 !important;
+  }
+
+  .card,
+  .skill-card {
+    width: 100%;
+    margin-bottom: 0;
+    break-inside: auto;
+  }
+
+  /* Ensure contact details stack properly */
+  .contact-details {
+    width: 100%;
+  }
+
+  .detail-card {
+    width: 100%;
+  }
+}
+
+/* Prevent horizontal scroll on all devices */
+@media (max-width: 1199px) {
+  * {
+    max-width: 100%;
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  section,
+  main,
+  .container,
+  .cards-container,
+  .skills-cards,
+  .projects-grid {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* Ensure buttons and form elements are touch-friendly */
+@media (max-width: 767px) {
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    min-height: 44px; /* iOS recommended touch target */
+  }
+
+  .project-links a {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
